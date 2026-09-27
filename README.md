@@ -19,6 +19,7 @@ Forma la tercera capa del stack de desarrollo:
 | **[TTT](https://github.com/eugenioenko/ttt)** | Terminal Text Tool (Editor IDE en terminal integrado con Herdr) | `t` / `ttt` | `ttt/` |
 | **[terminal-browser](https://terminal-browser.com/)** | Navegador web interactivo para terminal con gráficos Kitty y control de agentes | `tb` / `terminal-browser` | Sistema / Cask |
 | **[GitHub CLI](https://cli.github.com/)** | Gestión de repositorios, PRs e issues | `gh` | Estándar de sistema |
+| **[Oh My Posh](https://ohmyposh.dev/)** | Motor de prompt personalizable (tema Catppuccin Mocha con `rtovar@MacBook-Air`) | — | `oh-my-posh/catppuccin_mocha.omp.json` |
 
 ---
 

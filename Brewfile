@@ -15,5 +15,9 @@ brew "ttt"
 # GitHub CLI
 brew "gh"
 
+# Motor de prompt personalizable
+tap "jandedobbeleer/oh-my-posh"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+
 # Navegador web nativo para terminal (gráficos Kitty e integración de agentes)
 cask "terminal-browser"

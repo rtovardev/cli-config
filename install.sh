@@ -43,11 +43,24 @@ echo "✓ Lazydocker vinculado."
 mkdir -p "${HOME}/.config/ttt/plugins"
 echo "✓ TTT verificado en ~/.config/ttt/"
 
-# 6. Zsh integration
+# 6. Oh My Posh
+mkdir -p "${HOME}/.config/oh-my-posh"
+ln -sfn "${SCRIPT_DIR}/oh-my-posh/catppuccin_mocha.omp.json" "${HOME}/.config/oh-my-posh/catppuccin_mocha.omp.json"
+echo "✓ Oh My Posh vinculado (tema Catppuccin Mocha aplicado)."
+
+# 7. Zsh integration
 ZSHRC="${HOME}/.zshrc"
 SOURCE_LINE="[ -f \"${SCRIPT_DIR}/zsh/aliases.zsh\" ] && source \"${SCRIPT_DIR}/zsh/aliases.zsh\""
+OMP_INIT='eval "$(oh-my-posh init zsh --config "$HOME/.config/oh-my-posh/catppuccin_mocha.omp.json")"'
 
 if [ -f "${ZSHRC}" ]; then
+  if ! grep -Fq "oh-my-posh init zsh" "${ZSHRC}"; then
+    echo "" >> "${ZSHRC}"
+    echo "# Oh My Posh (Catppuccin Mocha theme)" >> "${ZSHRC}"
+    echo "${OMP_INIT}" >> "${ZSHRC}"
+    echo "✓ Oh My Posh integrado en ~/.zshrc"
+  fi
+
   if ! grep -Fq "${SCRIPT_DIR}/zsh/aliases.zsh" "${ZSHRC}"; then
     echo "" >> "${ZSHRC}"
     echo "# CLI Stack integrations & aliases" >> "${ZSHRC}"
