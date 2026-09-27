@@ -14,3 +14,6 @@ brew "ttt"
 
 # GitHub CLI
 brew "gh"
+
+# Navegador web nativo para terminal (gráficos Kitty e integración de agentes)
+cask "terminal-browser"
