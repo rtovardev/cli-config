@@ -15,3 +15,6 @@ elif [ -f "$HOME/.atuin/bin/env" ]; then
   . "$HOME/.atuin/bin/env"
   eval "$(atuin init zsh)"
 fi
+
+# Herdr Environment
+export HERDR_CONFIG_PATH="$HOME/developer/personal/herdr-config/config.toml"
