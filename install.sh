@@ -48,7 +48,14 @@ mkdir -p "${HOME}/.config/oh-my-posh"
 ln -sfn "${SCRIPT_DIR}/oh-my-posh/catppuccin_mocha.omp.json" "${HOME}/.config/oh-my-posh/catppuccin_mocha.omp.json"
 echo "✓ Oh My Posh vinculado (tema Catppuccin Mocha aplicado)."
 
-# 7. Zsh integration
+# 7. Codex Switcher
+mkdir -p "${HOME}/.local/bin"
+if [ -f "${SCRIPT_DIR}/bin/codex-switch" ]; then
+  ln -sfn "${SCRIPT_DIR}/bin/codex-switch" "${HOME}/.local/bin/codex-switch"
+  echo "✓ codex-switch vinculado: ~/.local/bin/codex-switch"
+fi
+
+# 8. Zsh integration
 ZSHRC="${HOME}/.zshrc"
 SOURCE_LINE="[ -f \"${SCRIPT_DIR}/zsh/aliases.zsh\" ] && source \"${SCRIPT_DIR}/zsh/aliases.zsh\""
 OMP_INIT='eval "$(oh-my-posh init zsh --config "$HOME/.config/oh-my-posh/catppuccin_mocha.omp.json")"'
